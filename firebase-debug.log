@@ -1,0 +1,21 @@
+[debug] [2024-09-07T01:13:22.171Z] ----------------------------------------------------------------------
+[debug] [2024-09-07T01:13:22.178Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\eders\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-09-07T01:13:22.179Z] CLI Version:   13.16.0
+[debug] [2024-09-07T01:13:22.179Z] Platform:      win32
+[debug] [2024-09-07T01:13:22.179Z] Node Version:  v20.17.0
+[debug] [2024-09-07T01:13:22.180Z] Time:          Fri Sep 06 2024 22:13:22 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-09-07T01:13:22.180Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-07T01:13:22.195Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-07T01:13:22.196Z] > authorizing via signed-in user (ubereder77@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\eders\Documents\sistemas-fracilia
+

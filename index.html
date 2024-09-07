@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Deslizante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height:100%;
+	    
+	    
+        }
+	header {
+	    padding:10px;
+	    background-color:#ddd;
+	    height:30px;
+	}
+
+        #menuButton {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            background-color: transparent;
+            color: black;
+            border: none;
+            font-size:22px;
+            cursor: pointer;
+            z-index:999;
+        }
+         #menuButton:hover {
+             color:red;
+         }
+
+        .menu {
+            position: fixed;
+           
+            top: 10;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+            
+            padding-top:40px;
+            //box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu.active {
+            transform: translateX(0);
+        }
+      
+        .conteinerCentral {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            z-index:2;
+	    height:calc(100vh - 50px);
+	    background-color:#ddd;
+
+  
+}
+
+
+.conteinerEsquerdo {
+ border:1px solid #ddd;
+ width:50%;
+ border-radius: 0px 10px 0px 0px;
+ background-color:white;
+
+}
+
+
+.conteinerDireito {
+   border:1px solid #ddd;
+   width:50%;
+  border-radius: 10px 0px 0px 0px; 
+   background-color:white;
+
+   
+}
+ #menuButton {
+            position: fixed;
+            top: 10px;
+            left: 0px;
+           
+            background-color: transparent;
+            color: black;
+            border: none;
+            font-size:22px;
+            cursor: pointer;
+            z-index:999;
+        }
+         #menuButton:hover {
+             color:red;
+         }
+        .itemMenu  {
+              
+              text-transform:uppercase;
+             
+        }
+        .itemMenu:hover{
+            background-color:gray;
+            color:red;
+        }
+	 .tituloSistema {
+            position: absolute;
+            left: 50%; 
+            top: 0; 
+	    color:red;
+            transform: translate(-50%, -50%); 
+            font-size: 24px;
+        }
+	li {
+    list-style: none;
+	margin:10px;
+	padding:10px;
+	}
+
+    </style>
+</head>
+<body>
+
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBX1R6fMPpTANKLDRgU_1o7hCf5huWjlb4",
+    authDomain: "sistema-sumhercorp-01.firebaseapp.com",
+    projectId: "sistema-sumhercorp-01",
+    storageBucket: "sistema-sumhercorp-01.appspot.com",
+    messagingSenderId: "760336812513",
+    appId: "1:760336812513:web:4b61240ee88bd2b7cb2aa0",
+    measurementId: "G-Y9FK0EWFH9"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+    <header>
+
+    	<bt id="menuBotao">&#9776;</bt>
+	<h1 class="tituloSistema"> SumherCorp Sistemas </h1>
+	
+    </header>
+
+    <div class="conteinerCentral">
+    <div id="menu" class="menu">
+        <li class="itemMenu">Home</li>
+        <li class="itemMenu">Adicionar</li>
+        <li class="itemMenu">Meus carros</li>
+	<li class="itemMenu">Relatorios</li>
+        <li class="itemMenu">Documentos</li>
+        <li class="itemMenu">Sair</li>
+    </div>
+   
+        
+        <div class="conteinerEsquerdo">
+            
+        </div>
+        <div class="conteinerDireito">
+            
+        </div>
+        
+    </div>
+    <script>
+        document.getElementById('menuBotao').addEventListener('click', function() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
